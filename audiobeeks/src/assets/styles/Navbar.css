@@ -1,0 +1,24 @@
+.Navbar {
+  width: 100%;
+  height: 50px;
+  display: inline-block;
+}
+
+.Navbar__brand-logo {
+  width: 70px;
+  margin-right: 0.5rem;
+}
+.Navbar__brand {
+  color: #ffffff;
+  border-bottom: 3px solid #959b95;
+  display: flex;
+  align-items: center;
+  margin-bottom: 100px;
+}
+
+.Navbar__brand:hover {
+  color: #ffffff;
+  text-decoration: none;
+}
+.Navbar__brand-logo {
+}
