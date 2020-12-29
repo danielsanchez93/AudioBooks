@@ -4,6 +4,7 @@ import "./App.css";
 import AllAudioItems from "./components/AllAudioItems";
 import Navbar from "./pages/Navbar";
 import Search from "./pages/Search";
+import Footer from "./pages/Footer";
 
 function App() {
   require("dotenv").config();
@@ -16,6 +17,7 @@ function App() {
         <Search />
         <AllAudioItems />
       </div>
+      <Footer />
     </BrowserRouter>
   );
 }

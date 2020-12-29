@@ -4,6 +4,10 @@
   display: inline-block;
 }
 
+.Navbar a {
+  font-size: 1.5em;
+}
+
 .Navbar__brand-logo {
   width: 70px;
   margin-right: 0.5rem;
