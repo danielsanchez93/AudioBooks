@@ -15,9 +15,10 @@ class AudioForm extends React.Component {
   //     console.log(this.props.formValues);
   // }
 
-  handleClick = (e) => {
-    console.log("Button pressed");
-  };
+  // handleClick = (e) => {
+  //   console.log(this.props);
+  //   this.props.onSubmit();
+  // };
 
   render() {
     return (
@@ -91,7 +92,7 @@ class AudioForm extends React.Component {
             />
           </div>
 
-          <button onClick={this.handleClick} className="btn btn-primary button-send">
+          <button onClick={this.props.onSubmit} className="btn btn-primary button-send">
             Crear
           </button>
 

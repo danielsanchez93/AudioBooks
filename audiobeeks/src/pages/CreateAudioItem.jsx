@@ -9,13 +9,16 @@ class CreateAudioItem extends React.Component{
         loading: false,
         error: null,
         form: {
-          firstName: "",
-          lastName: "",
-          email: "",
-          jobTitle: "",
-          twitter: "",
+          title: "",
+          is_original: false,
+          street_date: "",
+          cost_per_play: "",
+          authors: [],
+          narrators:[],
+          duration:"",
+          cover:""
         },
-      };
+    };
     
       handleChange = (e) => {
         const nextForm = this.state.form;
@@ -30,18 +33,57 @@ class CreateAudioItem extends React.Component{
     
       handleSubmit = async (e) => {
         e.preventDefault();
+        const {
+          title,
+          is_original,
+          street_date,
+          cost_per_play,
+          authors,
+          narrators,
+          duration,
+          cover
+        } = this.state.form;
         this.setState({ loading: true, error: null });
         try {
         //   await api.badges.create(this.state.form);
         var myHeaders = new Headers();
         myHeaders.append("X-Contentful-Content-Type", process.env.REACT_APP_CONTENT_TYPE_ID);
+        myHeaders.append("Authorization",`Bearer ${process.env.REACT_APP_API_KEY}`);
 
-        var raw = "{\n    \"fields\": {\n      \"title\": {\n        \"es-MX\": \"Elon Musk: Tesla, SpaceX, and the Quest for a Fantastic Future\"\n      },\n      \"is_original\": {\n        \"es-MX\": false\n      },\n      \"street_date\": {\n        \"es-MX\": \"2020-12-25T00:00-06:00\"\n      },\n      \"cost_per_play\": {\n        \"es-MX\": 90\n      },\n      \"authors\": {\n        \"es-MX\": [\n          \"Ashlee Vance\"\n        ]\n      },\n      \"narrators\": {\n        \"es-MX\": [\n          \"Fred Sanders\"\n        ]\n      },\n      \"duration\": {\n        \"es-MX\": 589632\n      },\n      \"cover\": {\n        \"es-MX\": \"https://images.findawayworld.com/v1/image/cover/CD059097\"\n      }\n    }\n  }";
+        const raw = {
+          fields:{
+            title:{
+              'es-MX' : title
+            },
+            is_original:{
+              'es-MX' : !!is_original
+            },
+            street_date:{
+              'es-MX' : street_date
+            },
+            cost_per_play:{
+              'es-MX' : parseInt(cost_per_play)
+            },
+            authors:{
+              'es-MX':authors.split(',')
+            },
+            narrators:{
+              'es-MX':narrators.split(',')
+            },
+            duration:{
+              'es-MX':parseInt(duration)
+            },
+            cover:{
+              'es-MX':cover
+            }
 
+          }
+        };
+        
         var requestOptions = {
         method: 'POST',
         headers: myHeaders,
-        body: raw,
+        body: JSON.stringify(raw),
         redirect: 'follow'
         };
 
@@ -51,7 +93,7 @@ class CreateAudioItem extends React.Component{
         .catch(error => console.log('error', error));
                 this.setState({ loading: false });
             
-                this.props.history.push("/badges");
+                this.props.history.push("/");
                 } catch (error) {
                 this.setState({ loading: false, error: error });
                 }
