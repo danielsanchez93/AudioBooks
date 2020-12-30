@@ -1,0 +1,14 @@
+.form-container {
+  margin-top: 50px;
+  color: white;
+}
+
+.form-container .button-send {
+  width: 80px;
+  height: 40px;
+  background-color: #36d7dc;
+}
+
+.checkbox {
+  width: 50px !important;
+}

@@ -57,6 +57,7 @@
 
 .Modal__isOriginal {
   color: aquamarine;
+  font-weight: bold;
 }
 .Modal__authors {
 }

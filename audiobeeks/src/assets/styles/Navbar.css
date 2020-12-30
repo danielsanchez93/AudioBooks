@@ -2,10 +2,41 @@
   width: 100%;
   height: 50px;
   display: inline-block;
+  /* border-bottom: 3px solid #959b95; */
 }
 
 .Navbar a {
   font-size: 1.5em;
+}
+
+.Navbar__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.Navbar__admin {
+  grid-column: 2;
+  margin-top: 15px;
+  justify-self: right;
+  margin-right: 0.5rem;
+  text-decoration: none;
+}
+
+.Navbar__admin a {
+  color: white;
+  text-decoration: none;
+}
+
+.Navbar__admin a:hover {
+  text-decoration: none;
+}
+
+.Navbar__account {
+  cursor: pointer;
+  margin-left: 15px;
+  width: 35px;
+  height: auto;
+  color: white;
 }
 
 .Navbar__brand-logo {
@@ -14,7 +45,6 @@
 }
 .Navbar__brand {
   color: #ffffff;
-  border-bottom: 3px solid #959b95;
   display: flex;
   align-items: center;
   margin-bottom: 100px;

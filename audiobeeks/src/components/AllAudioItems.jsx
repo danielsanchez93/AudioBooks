@@ -2,6 +2,7 @@ import React from 'react';
 
 import AudioItem from './AudioItem'
 import Loader from './Loader'
+import Search from "../pages/Search";
 
 import '../assets/styles/AllAudioItems.css'
 
@@ -49,9 +50,12 @@ class AllAudioItems extends React.Component{
        
         if(!this.state.loading){
             return( 
-                <div className="Audiobooks-container">
-                   <AudioItem audioData={this.state.data.items}/>
-                </div>
+               <div>
+                   <Search/>
+                    <div className="Audiobooks-container">
+                    <AudioItem audioData={this.state.data.items}/>
+                    </div>
+               </div>
             )
         }
 
