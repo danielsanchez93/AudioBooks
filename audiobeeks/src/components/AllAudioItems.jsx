@@ -27,7 +27,8 @@ class AllAudioItems extends React.Component{
                 }
             },
             loading:true,
-            error:null
+            error:null,
+            searching:false
         }
     }
 

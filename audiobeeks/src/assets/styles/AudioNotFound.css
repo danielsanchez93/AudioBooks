@@ -1,0 +1,13 @@
+.NotFound__container {
+  width: 100%;
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  color: azure;
+  text-align: center;
+}
+
+.NotFound__container img {
+  width: 100px;
+  margin: auto;
+}
