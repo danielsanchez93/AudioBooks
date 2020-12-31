@@ -1,0 +1,38 @@
+.Delete__modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Delete__container {
+  border-radius: 15px;
+  display: grid;
+  overflow: hidden;
+  grid-template-rows: 1fr 1fr;
+  position: relative;
+  top: 10rem;
+  background-color: #ffffff;
+  width: 400px;
+  height: 200px;
+  z-index: 2;
+  padding: 20px;
+  text-align: center;
+}
+
+.Delete__buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.Delete__buttons Button {
+  height: 40px;
+  margin-left: 10px;
+  margin-right: 10px;
+  z-index: 2;
+}

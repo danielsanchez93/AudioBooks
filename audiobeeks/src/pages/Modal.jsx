@@ -7,6 +7,11 @@ function Modal(props) {
     if (!props.isOpen) {
         return null;
     }
+
+    // function handleClickDelete(e) {
+    //   props.props.openDeleteModal();
+    // }
+
     function secondsToString(seconds) {
         var hour = Math.floor(seconds / 3600);
         hour = (hour < 10)? '0' + hour : hour;
@@ -18,7 +23,7 @@ function Modal(props) {
       }
 
   return ReactDOM.createPortal(
-    <div onClick={props.onClose} className="Modal">
+    <div /* onClick={props.onClose} */ className="Modal">
       <div className="Modal__container">
         <button onClick={props.onClose} className="Modal__close-button">
           X
@@ -32,7 +37,7 @@ function Modal(props) {
         <p className="Modal__duration">{secondsToString(props.aData.fields.duration['es-MX'])}</p>
         <div className="Modal__btn-container">
             <button className="btn btn-info">Edit</button>
-            <button className="btn btn-danger">Delete</button>
+            <button onClose={props.isDeleteClose} onClick={props.isDeleteOpen} className="btn btn-danger">Delete</button>
         </div>
       </div>
     </div>,

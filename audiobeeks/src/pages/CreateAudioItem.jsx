@@ -108,13 +108,11 @@ class CreateAudioItem extends React.Component{
             <div className="container">
               <div className="row">
                 {/* <div className="col">
-                  <Badge
-                    firstName={this.state.form.firstName || "FIRST_NAME"}
-                    lastName={this.state.form.lastName || "LAST_NAME"}
-                    jobTitle={this.state.form.jobTitle || "JOB_TITLE"}
-                    email={this.state.form.email || "EMAIL"}
-                    twitter={this.state.form.twitter || "TWITTER"}
-                    avatarURL="https://www.gravatar.com/avatar?d=identicon"
+                  <AudioCard
+                    title={this.state.form.title || "FIRST_NAME"}
+                    is_original={this.state.form.is_original || "LAST_NAME"}
+                    street_date={this.state.form.street_date || "JOB_TITLE"}
+                    cover="https://www.gravatar.com/avatar?d=identicon"
                   />
                 </div> */}
                 <div className="col-6">
