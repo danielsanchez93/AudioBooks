@@ -8,7 +8,9 @@ import AllAudioItems from "./components/AllAudioItems";
 // import Footer from "./pages/Footer";
 import Layout from "./pages/Layout";
 import CreateAudioItem from "./pages/CreateAudioItem";
+import EditAudioItem from "./pages/EditAudioItem";
 import SearchResults from "./pages/SearchResults";
+import NotFound from "./pages/NotFound";
 
 function App() {
   require("dotenv").config();
@@ -19,7 +21,8 @@ function App() {
           <Route exact path="/" component={AllAudioItems} />
           <Route exact path="/create" component={CreateAudioItem} />
           <Route exact path="/SearchResults/:ids" component={SearchResults} />
-          <Route exact path="/:id/edit" component={CreateAudioItem} />
+          <Route exact path="/:id/edit" component={EditAudioItem} />
+          <Route component={NotFound} />
         </Switch>
       </Layout>
     </BrowserRouter>

@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import {Link} from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.css'
 import '../assets/styles/Modal.css'
 
@@ -36,8 +37,13 @@ function Modal(props) {
         {/* <p className="Modal__authors">Autores</p> */}
         <p className="Modal__duration">{secondsToString(props.aData.fields.duration['es-MX'])}</p>
         <div className="Modal__btn-container">
-            <button className="btn btn-info">Edit</button>
-            <button onClose={props.isDeleteClose} onClick={props.isDeleteOpen} className="btn btn-danger">Delete</button>
+            {/* <button className="btn btn-info">Editar</button> */}
+              <button className="btn btn-info">
+                <Link className="Modal__link" to={`/${props.aData.sys.id}/edit`}>
+                  Editar
+                </Link>
+              </button>
+            <button onClose={props.isDeleteClose} onClick={props.isDeleteOpen} className="btn btn-danger">Eliminar</button>
         </div>
       </div>
     </div>,

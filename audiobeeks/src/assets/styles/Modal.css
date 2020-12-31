@@ -72,6 +72,7 @@
 }
 
 .Modal__btn-container {
+  color: azure;
   grid-row: 7;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -81,4 +82,14 @@
   margin-left: 10px;
   margin-right: 10px;
   z-index: 2;
+}
+.Modal__link {
+  color: azure;
+  text-align: center;
+  text-decoration: none !important;
+}
+
+.Modal__link:hover {
+  color: azure;
+  margin: auto;
 }

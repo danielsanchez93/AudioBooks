@@ -2,8 +2,11 @@ import React from "react";
 import '../assets/styles/AudioForm.css'
 
 const createAudiobook_text = "Crear Audiolibro";
+const editarAudiobook_text = "Editar Audiolibro";
+const create_text = "Crear";
+const editar_text = "Editar";
 
-class AudioForm extends React.Component {
+class AudioEditForm extends React.Component {
   handleChange = (e) => {
     this.setState({
       [e.target.name]: e.target.value,
@@ -13,7 +16,7 @@ class AudioForm extends React.Component {
   render() {
     return (
       <div className="form-container">
-        <h1>{createAudiobook_text}</h1>
+        <h1>{this.props.isCreate?createAudiobook_text:editarAudiobook_text}</h1>
         <form onSubmit={this.props.onSubmit}>
           <div className="form-group">
             <label htmlFor="title">Título</label>
@@ -23,7 +26,6 @@ class AudioForm extends React.Component {
               type="text"
               name="title"
               value={this.props.formValues.title}
-              placeholder={this.props.formValues.title}
             />
             <label htmlFor="is Original">Original</label>
             <input
@@ -84,7 +86,7 @@ class AudioForm extends React.Component {
           </div>
 
           <button onClick={this.props.onSubmit} className="btn btn-primary button-send">
-            Crear
+          {!this.props.isCreate?editar_text:create_text}
           </button>
 
           {this.props.error && (
@@ -96,4 +98,4 @@ class AudioForm extends React.Component {
   }
 }
 
-export default AudioForm;
+export default AudioEditForm;

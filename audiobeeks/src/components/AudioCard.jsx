@@ -19,6 +19,7 @@ class AudioCard extends React.Component{
         this.state={
             isModalOpen:false,
             isDeleteModalOpen:false,
+            isEditModalOpen:false,
             audioData:{},
         }
 
@@ -56,7 +57,12 @@ class AudioCard extends React.Component{
                     window.location.reload(false);
                 })
                 .catch(error => console.log('error', error));
-                
+        }
+
+        this.handleEditModal=()=>{
+            this.setState({
+                isEditModalOpen:true
+            })
         }
 
     }
@@ -79,6 +85,7 @@ class AudioCard extends React.Component{
                             onClose={this.handleCloseModal}
                             isDeleteOpen={this.handleOpenDeleteModal}
                             isDeleteClose={this.handleCloseDeleteModal}
+
                     />
                     <DeleteConfirmation deleteAudio={this.handleDeleteAudio} isDeleteClose={this.handleCloseDeleteModal} isDeleteModalOpen={this.state.isDeleteModalOpen}/>
                     
