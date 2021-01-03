@@ -8,6 +8,7 @@ Al recargar la página podrás ver el catálogo de audiolibros disponibles con 3
 
 - Clickear una de las portadas para ver título y duración del Audio, junto con dos botones para Editar o Eliminar el audiolibre
 - Entrar a la creación de un nuevo audiolibro desde el "Menú" de Admin, clickeando en la esquina superior derecha
+- Los AUTORES y NARRADORES son separados por comas ',' esto es muy importante
 - Buscar entre los audiolibros con la barra de búsqueda, se ejecuta al presionar Enter
 
 ## Dependencias
