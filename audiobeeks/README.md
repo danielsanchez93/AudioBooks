@@ -2,6 +2,19 @@
 
 Es una aplicación en React que intenta emular un servicio de Beek desde una cuenta de administrador
 
+## Instalación
+
+- Descargando el proyecto (ya sea clonado o .zip)
+- En consola, introducir el comando en la ruta raíz, esto instalará las dependencias en el proyecto
+```
+npm install --save
+```
+- Haciendo uso del siguiente comando de consola hará que la aplicación comience a funcionar
+```
+npm run start
+```
+
+
 ## Uso
 
 Al recargar la página podrás ver el catálogo de audiolibros disponibles con 3 acciones disponibles:
