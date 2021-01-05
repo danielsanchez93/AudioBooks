@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/AudioBooks/static/css/main.545aa40e.chunk.css",
+    "main.js": "/AudioBooks/static/js/main.79e0e580.chunk.js",
+    "main.js.map": "/AudioBooks/static/js/main.79e0e580.chunk.js.map",
+    "runtime-main.js": "/AudioBooks/static/js/runtime-main.58369e3f.js",
+    "runtime-main.js.map": "/AudioBooks/static/js/runtime-main.58369e3f.js.map",
+    "static/css/2.f04cdff6.chunk.css": "/AudioBooks/static/css/2.f04cdff6.chunk.css",
+    "static/js/2.00ac9c7e.chunk.js": "/AudioBooks/static/js/2.00ac9c7e.chunk.js",
+    "static/js/2.00ac9c7e.chunk.js.map": "/AudioBooks/static/js/2.00ac9c7e.chunk.js.map",
+    "static/js/3.92d0726c.chunk.js": "/AudioBooks/static/js/3.92d0726c.chunk.js",
+    "static/js/3.92d0726c.chunk.js.map": "/AudioBooks/static/js/3.92d0726c.chunk.js.map",
+    "index.html": "/AudioBooks/index.html",
+    "static/css/2.f04cdff6.chunk.css.map": "/AudioBooks/static/css/2.f04cdff6.chunk.css.map",
+    "static/css/main.545aa40e.chunk.css.map": "/AudioBooks/static/css/main.545aa40e.chunk.css.map",
+    "static/js/2.00ac9c7e.chunk.js.LICENSE.txt": "/AudioBooks/static/js/2.00ac9c7e.chunk.js.LICENSE.txt",
+    "static/media/account.7f73584e.svg": "/AudioBooks/static/media/account.7f73584e.svg",
+    "static/media/error.8a7d61e3.svg": "/AudioBooks/static/media/error.8a7d61e3.svg",
+    "static/media/storytelling.c8988039.svg": "/AudioBooks/static/media/storytelling.c8988039.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.58369e3f.js",
+    "static/css/2.f04cdff6.chunk.css",
+    "static/js/2.00ac9c7e.chunk.js",
+    "static/css/main.545aa40e.chunk.css",
+    "static/js/main.79e0e580.chunk.js"
+  ]
+}
